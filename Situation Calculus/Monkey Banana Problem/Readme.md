@@ -25,3 +25,20 @@ grasp(Obj)
 ungrasp(Obj)
 
 The initial situation is init. do(A, S) represents the new situation after applying an action A on situation S.
+
+## Some Sample inputs
+### Single State
+at(monkey, posa, low, S).
+at(box, posc, low, S), at(monkey, posa, low, S), holds([banana1, banana2, banana3], S).
+at(box, posa, low, S), at(monkey, posa, low, S).
+at(banana2, posd, low, S), at(box, posc, low, S), at(monkey, posa, low, S), holds([banana1, banana3], S).
+at(box, posa, low, S), at(monkey, posa, high, S).
+at(box, posb, low, S), at(monkey, posa, high, S).
+at(banana1, posa, low, S), at(banana2, posb, low, S), holds([banana1], S).
+at(banana1, posb, high, S).
+at(banana1, posb, high, S), at(banana1, posa, high, init).
+at(banana1, posb, high, S), at(banana1, posb, high, init).
+at(banana1, posc, high, S), at(monkey, posd, low, S).
+
+### Multi-State
+at(banana2, posd, low, S), at(box, posc, low, S1), at(monkey, posa, low, S2), holds([banana1, banana3], S).
